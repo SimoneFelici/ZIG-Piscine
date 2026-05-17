@@ -5,8 +5,10 @@ fn print_comb() void {
     var first = true;
 
     while (comb[0] < 10) : (comb[0] += 1) {
+        comb[1] = comb[0] + 1;
         while (comb[1] < 10) : (comb[1] += 1) {
             while (comb[2] < 10) : (comb[2] += 1) {
+                comb[2] = comb[1] + 1;
                 if (comb[2] > comb[1] and comb[2] > comb[0] and comb[1] > comb[0]) {
                     var out = [3]u8{
                         comb[0] + '0',
